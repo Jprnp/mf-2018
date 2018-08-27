@@ -1,6 +1,6 @@
-#aula-2
+# aula-2
 
-##Comandos executados:
+## Comandos executados:
 + cd mf-2018/;
 + mkdir aula-2;
 + touch README.md;
