@@ -1,4 +1,4 @@
-package com.github.jprnp.diretorio_lista_dirs;
+package com.github.jprnp.diretorio_listar_dirs;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Classe principal da aplicação.
  * @author jprnp
  */
-public final class DiretorioListaDirs {
+public final class DiretorioListarDirs {
     /**
      * Lista com os caminhos dos diretórios.
      */
@@ -20,7 +20,7 @@ public final class DiretorioListaDirs {
     /**
      * Construtor privado p/ adequação com checkstyle.
      */
-    private DiretorioListaDirs() { }
+    private DiretorioListarDirs() { }
 
     /**
      * Método de execução principal da aplicação.

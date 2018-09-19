@@ -8,7 +8,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.mainClass>com.github.jprnp.diretorio_lista_dirs.DiretorioListaDirs</project.mainClass>
+		<project.mainClass>com.github.jprnp.diretorio_lista_dirs.DiretorioListarDirs</project.mainClass>
 	</properties>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -86,7 +86,7 @@
 	<build>
 
 		<!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-		<finalName>DiretorioListaDirs</finalName>
+		<finalName>DiretorioListarDirs</finalName>
 
 		<plugins>
 
@@ -346,7 +346,7 @@
 									<goal>single</goal>
 								</goals>
 								<configuration>
-									<finalName>DiretorioListaDirs-unico</finalName>
+									<finalName>DiretorioListarDirs-unico</finalName>
 									<archive>
 										<manifest>
 											<mainClass>${project.mainClass}</mainClass>
