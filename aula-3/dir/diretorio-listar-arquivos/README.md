@@ -7,7 +7,7 @@ Para gerar o arquivo executável, é necessário que, no diretório base deste, 
 ```
 mvn package -P executavel-unico
 ```
-Este comando irá gerar um diretório _target_ e, dentro dele, o arquivo _DiretorioListarArquivos.jar_.
+Este comando irá gerar um diretório _target_ e, dentro dele, o arquivo _DiretorioListarArquivos-unico.jar_.
 
 ## Executar o arquivo
 Para executar o arquivo, será necessário executar o seguinte comando:
