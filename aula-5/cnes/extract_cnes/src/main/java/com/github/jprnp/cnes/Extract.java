@@ -1,11 +1,13 @@
 package com.github.jprnp.cnes;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 /**
@@ -17,6 +19,10 @@ public final class Extract {
    * Nome do arquivo a ser tratado.
    */
   public static final String FILENAME = "tbEstabelecimento";
+  /**
+   * Leitor do arquivo.
+   */
+  public static InputStreamReader rd = null;
 
   /**
    * Método principal de execução.
@@ -27,7 +33,6 @@ public final class Extract {
     URLConnection con = null;
     ZipInputStream zipStream = null;
     ZipEntry entry = null;
-    InputStreamReader rd = null;
 
     try {
       cnesUrl = new URL(args[0]);
@@ -45,12 +50,27 @@ public final class Extract {
 
     try {
       zipStream = new ZipInputStream(con.getInputStream());
-      rd = new InputStreamReader(zipStream);
+      File file = File.createTempFile("cnes", ".zip");
+      ZipFile zipFile = new ZipFile(file);
+      while ((entry = zipStream.getNextEntry()) != null) {
+        if (!entry.getName().contains(FILENAME)) {
+          continue;
+        }
+        rd = new InputStreamReader(zipFile.getInputStream(entry));  
+        processaArquivo();
+        rd.close();
+        break;
+      }
+      zipFile.close();
       //int data = rd.read();
       System.out.println(rd.read());
     } catch (IOException e) {
       System.out.println("Exceção de IO.");
       System.exit(2);
     }
+  }
+  
+  public static void processaArquivo() {
+    
   }
 }
