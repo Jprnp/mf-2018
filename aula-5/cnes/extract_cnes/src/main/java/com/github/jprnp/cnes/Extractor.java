@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
@@ -48,10 +49,6 @@ public final class Extractor {
    */
   public static final short LONGITUDE = 40;
   /**
-   * Leitor do arquivo.
-   */
-  public static BufferedReader rd = null;
-  /**
    * Lista de unidades médicas.
    */
   public static ArrayList<
@@ -91,10 +88,7 @@ public final class Extractor {
       if (!entry.getName().contains(FILENAME)) {
         continue;
       }
-      rd = new BufferedReader(
-          new InputStreamReader(zipFile.getInputStream(entry)));
-      preencheUnidades();
-      rd.close();
+      preencheUnidades(zipFile.getInputStream(entry));
       zipFile.close();
       break;
     }
@@ -106,7 +100,8 @@ public final class Extractor {
    * atributos pertinentes por unidade médica.
    * @throws IOException Exceção de IO
    */
-  private static void preencheUnidades() throws IOException {
+  private static void preencheUnidades(final InputStream is) throws IOException {
+    BufferedReader rd = new BufferedReader(new InputStreamReader(is));
     String line = null;
     String[] split = null;
     line = rd.readLine();
@@ -118,6 +113,7 @@ public final class Extractor {
           split[LATITUDE].replace("\"", ""),
           split[LONGITUDE].replace("\"", "")));
     }
+    rd.close();
   }
 
   /**
@@ -126,6 +122,9 @@ public final class Extractor {
    * @throws IOException Erro na escrita do arquivo
    */
   public static void gerarArquivo(final String name) throws IOException {
+    if (!name.contains(".json")) {
+      name.concat(".json");
+    }
     FileWriter writer = new FileWriter("./" + name);
     Gson gson = new Gson();
     gson.toJson(unidades, writer);
