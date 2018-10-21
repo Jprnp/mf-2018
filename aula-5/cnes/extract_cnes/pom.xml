@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.mainClass>com.github.jprnp.cnes.Extract</project.mainClass>
+		<project.mainClass>com.github.jprnp.cnes.App</project.mainClass>
 	</properties>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -79,7 +79,7 @@
 
 	<build>
 		<!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-		<finalName>Extract</finalName>
+		<finalName>App</finalName>
 
 		<plugins>
 			<!-- javadoc:javadoc -->
@@ -230,7 +230,7 @@
 									<goal>single</goal>
 								</goals>
 								<configuration>
-									<finalName>Extract-unico</finalName>
+									<finalName>App-unico</finalName>
 									<archive>
 										<manifest>
 											<mainClass>${project.mainClass}</mainClass>
