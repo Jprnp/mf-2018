@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="cadastroDto" type="cadastroDto"/>
+
+  <xs:complexType name="cadastroDto">
+    <xs:sequence>
+      <xs:element name="idIdentificador" type="xs:string" minOccurs="0"/>
+      <xs:element name="individuo" type="xs:string" minOccurs="0"/>
+      <xs:element name="designacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="area" type="xs:int"/>
+      <xs:element name="alternativo" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoArea" type="xs:string" minOccurs="0"/>
+      <xs:element name="emissor" type="xs:string" minOccurs="0"/>
+      <xs:element name="data" type="xs:string" minOccurs="0"/>
+      <xs:element name="tipoIdentificador" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoTipoId" type="xs:string" minOccurs="0"/>
+      <xs:element name="tipoCertidao" type="xs:int"/>
+      <xs:element name="descricaoTipoCert" type="xs:string" minOccurs="0"/>
+      <xs:element name="cartorio" type="xs:string" minOccurs="0"/>
+      <xs:element name="livro" type="xs:int"/>
+      <xs:element name="folha" type="xs:int"/>
+      <xs:element name="termo" type="xs:int"/>
+      <xs:element name="zona" type="xs:int"/>
+      <xs:element name="sessao" type="xs:int"/>
+      <xs:element name="relacionamento" type="xs:int"/>
+      <xs:element name="descricaoRelacionamento" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataInVinculo" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataFinVinculo" type="xs:string" minOccurs="0"/>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+      <xs:element name="utilizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="alternativaUtilizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="titulos" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomes" type="xs:string" minOccurs="0"/>
+      <xs:element name="sobrenomes" type="xs:string" minOccurs="0"/>
+      <xs:element name="sufixos" type="xs:string" minOccurs="0"/>
+      <xs:element name="preferido" type="xs:int"/>
+      <xs:element name="descricaoPreferido" type="xs:string" minOccurs="0"/>
+      <xs:element name="usoCondicional" type="xs:int"/>
+      <xs:element name="descricaoUsoCondicional" type="xs:string" minOccurs="0"/>
+      <xs:element name="uso" type="xs:int"/>
+      <xs:element name="alternativoUso" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoUso" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataInUtilizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataFinUtilizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="serie" type="xs:int"/>
+      <xs:element name="estado" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomeEstado" type="xs:string" minOccurs="0"/>
+      <xs:element name="meio" type="xs:int"/>
+      <xs:element name="descricaoMeio" type="xs:string" minOccurs="0"/>
+      <xs:element name="alternativoMeio" type="xs:string" minOccurs="0"/>
+      <xs:element name="preferencia" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoPreferencia" type="xs:string" minOccurs="0"/>
+      <xs:element name="detalhe" type="xs:string" minOccurs="0"/>
+      <xs:element name="usoComunicacao" type="xs:int"/>
+      <xs:element name="descricaoUsoComunicacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="alternativoUsoComunicacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="endereco" type="xs:string" minOccurs="0"/>
+      <xs:element name="bairro" type="xs:string" minOccurs="0"/>
+      <xs:element name="distrito" type="xs:string" minOccurs="0"/>
+      <xs:element name="municipio" type="xs:int"/>
+      <xs:element name="descricaoMunicipio" type="xs:string" minOccurs="0"/>
+      <xs:element name="cep" type="xs:string" minOccurs="0"/>
+      <xs:element name="caixaPostal" type="xs:string" minOccurs="0"/>
+      <xs:element name="pais" type="xs:int"/>
+      <xs:element name="nomePais" type="xs:string" minOccurs="0"/>
+      <xs:element name="tipoEndereco" type="xs:int"/>
+      <xs:element name="descricaoTipoEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataInicialEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataInEndAcu" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataFinalEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataFinEndAcu" type="xs:string" minOccurs="0"/>
+      <xs:element name="linhaEndereco" type="xs:string" minOccurs="0"/>
+      <xs:element name="ordemEndereco" type="xs:int"/>
+      <xs:element name="nascimento" type="xs:string" minOccurs="0"/>
+      <xs:element name="nascAcuracia" type="xs:string" minOccurs="0"/>
+      <xs:element name="nascSeguimento" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoNascSeg" type="xs:string" minOccurs="0"/>
+      <xs:element name="nascPluralidade" type="xs:int"/>
+      <xs:element name="descricaoNascPlu" type="xs:string" minOccurs="0"/>
+      <xs:element name="nascOrdem" type="xs:int"/>
+      <xs:element name="descricaoNascOrd" type="xs:string" minOccurs="0"/>
+      <xs:element name="obito" type="xs:string" minOccurs="0"/>
+      <xs:element name="obitoAcuracia" type="xs:string" minOccurs="0"/>
+      <xs:element name="obitoFonte" type="xs:int"/>
+      <xs:element name="descricaoObitoFnt" type="xs:string" minOccurs="0"/>
+      <xs:element name="sexo" type="xs:int"/>
+      <xs:element name="descricaoSexo" type="xs:string" minOccurs="0"/>
+      <xs:element name="alternativoSexo" type="xs:string" minOccurs="0"/>
+      <xs:element name="mae" type="xs:string" minOccurs="0"/>
+      <xs:element name="pai" type="xs:string" minOccurs="0"/>
+      <xs:element name="situacaoFamiliar" type="xs:int"/>
+      <xs:element name="descricaoSitFam" type="xs:string" minOccurs="0"/>
+      <xs:element name="raca" type="xs:int"/>
+      <xs:element name="descricaoRaca" type="xs:string" minOccurs="0"/>
+      <xs:element name="comentario" type="xs:string" minOccurs="0"/>
+      <xs:element name="nacionalidade" type="xs:int"/>
+      <xs:element name="descricaoNacionalidade" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataEntradaPais" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

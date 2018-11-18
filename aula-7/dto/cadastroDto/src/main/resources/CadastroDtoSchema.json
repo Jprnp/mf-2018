@@ -1,0 +1,379 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "",
+  "title": "CadastroDto",
+  "description": "Cadastro de Paciente",
+  "type": "object",
+  "properties": {
+    "idIdentificador": {
+		"type": "string"
+	},
+	"individuo": {
+		"type": "string"
+	},
+	"designacao": {
+		"type": "string"
+	},
+	"area": {
+		"type": "integer"
+	},
+	"alternativo": {
+		"type": "string"
+	},
+	"descricaoArea": {
+		"type": "string"
+	},
+	"emissor": {
+		"type": "string"
+	},
+	"data": {
+		"type": "string"
+	},
+	"tipoIdentificador": {
+		"type": "string"
+	},
+	"descricaoTipoId": {
+		"type": "string"
+	},
+	"tipoCertidao": {
+		"type": "integer"
+	},
+	"descricaoTipoCert": {
+		"type": "string"
+	},
+	"cartorio": {
+		"type": "string"
+	},
+	"livro": {
+		"type": "integer"
+	},
+	"folha": {
+		"type": "integer"
+	},
+	"termo": {
+		"type": "integer"
+	},
+	"zona": {
+		"type": "integer"
+	},
+	"sessao": {
+		"type": "integer"
+	},
+	"relacionamento": {
+		"type": "integer"
+	},
+	"descricaoRelacionamento": {
+		"type": "string"
+	},
+	"dataInVinculo": {
+		"type": "string"
+	},
+	"dataFinVinculo": {
+		"type": "string"
+	},
+	"nome": {
+		"type": "string"
+	},
+	"utilizacao": {
+		"type": "string"
+	},
+	"alternativaUtilizacao": {
+		"type": "string"
+	},
+	"titulos": {
+		"type": "string"
+	},
+	"nomes": {
+		"type": "string"
+	},
+	"sobrenomes": {
+		"type": "string"
+	},
+	"sufixos": {
+		"type": "string"
+	},
+	"preferido": {
+		"type": "integer"
+	},
+	"descricaoPreferido": {
+		"type": "string"
+	},
+	"usoCondicional": {
+		"type": "integer"
+	},
+	"descricaoUsoCondicional": {
+		"type": "string"
+	},
+	"uso": {
+		"type": "integer"
+	},
+	"alternativoUso": {
+		"type": "string"
+	},
+	"descricaoUso": {
+		"type": "string"
+	},
+	"dataInUtilizacao": {
+		"type": "string"
+	},
+	"dataFinUtilizacao": {
+		"type": "string"
+	},
+	"serie": {
+		"type": "integer"
+	},
+	"estado": {
+		"type": "string"
+	},
+	"nomeEstado": {
+		"type": "string"
+	},
+	"meio": {
+		"type": "integer"
+	},
+	"descricaoMeio": {
+		"type": "string"
+	},
+	"alternativoMeio": {
+		"type": "string"
+	},
+	"preferencia": {
+		"type": "string"
+	},
+	"descricaoPreferencia": {
+		"type": "string"
+	},
+	"detalhe": {
+		"type": "string"
+	},
+	"usoComunicacao": {
+		"type": "integer"
+	},
+	"descricaoUsoComunicacao": {
+		"type": "string"
+	},
+	"alternativoUsoComunicacao": {
+		"type": "string"
+	},
+	"endereco": {
+		"type": "string"
+	},
+	"bairro": {
+		"type": "string"
+	},
+	"distrito": {
+		"type": "string"
+	},
+	"municipio": {
+		"type": "integer"
+	},
+	"descricaoMunicipio": {
+		"type": "string"
+	},
+	"cep": {
+		"type": "string"
+	},
+	"caixaPostal": {
+		"type": "string"
+	},
+	"pais": {
+		"type": "integer"
+	},
+	"nomePais": {
+		"type": "string"
+	},
+	"tipoEndereco": {
+		"type": "integer"
+	},
+	"descricaoTipoEnd": {
+		"type": "string"
+	},
+	"dataInicialEnd": {
+		"type": "string"
+	},
+	"dataInEndAcu": {
+		"type": "string"
+	},
+	"dataFinalEnd": {
+		"type": "string"
+	},
+	"dataFinEndAcu": {
+		"type": "string"
+	},
+	"linhaEndereco": {
+		"type": "string"
+	},
+	"ordemEndereco": {
+		"type": "integer"
+	},
+	"nascimento": {
+		"type": "string"
+	},
+	"nascAcuracia": {
+		"type": "string"
+	},
+	"nascSeguimento": {
+		"type": "string"
+	},
+	"descricaoNascSeg": {
+		"type": "string"
+	},
+	"nascPluralidade": {
+		"type": "integer"
+	},
+	"descricaoNascPlu": {
+		"type": "string"
+	},
+	"nascOrdem": {
+		"type": "integer"
+	},
+	"descricaoNascOrd": {
+		"type": "string"
+	},
+	"obito": {
+		"type": "string"
+	},
+	"obitoAcuracia": {
+		"type": "string"
+	},
+	"obitoFonte": {
+		"type": "integer"
+	},
+	"descricaoObitoFnt": {
+		"type": "string"
+	},
+	"sexo": {
+		"type": "integer"
+	},
+	"descricaoSexo": {
+		"type": "string"
+	},
+	"alternativoSexo": {
+		"type": "string"
+	},
+	"mae": {
+		"type": "string"
+	},
+	"pai": {
+		"type": "string"
+	},
+	"situacaoFamiliar": {
+		"type": "integer"
+	},
+	"descricaoSitFam": {
+		"type": "string"
+	},
+	"raca": {
+		"type": "integer"
+	},
+	"descricaoRaca": {
+		"type": "string"
+	},
+	"comentario": {
+		"type": "string"
+	},
+	"nacionalidade": {
+		"type": "integer"
+	},
+	"descricaoNacionalidade": {
+		"type": "string"
+	},
+	"dataEntradaPais": {
+		"type": "string"
+	}
+	},
+	"required": [ 
+				"idIdentificador",
+				"individuo",
+				"designacao",
+				"area",
+				"alternativo",
+				"descricaoArea",
+				"emissor",
+				"data",
+				"tipoIdentificador",
+				"descricaoTipoId",
+				"tipoCertidao",
+				"descricaoTipoCert",
+				"cartorio",
+				"livro",
+				"folha",
+				"termo",
+				"zona",
+				"sessao",
+				"relacionamento",
+				"descricaoRelacionamento",
+				"dataInVinculo",
+				"dataFinVinculo",
+				"nome",
+				"utilizacao",
+				"alternativaUtilizacao",
+				"titulos",
+				"nomes",
+				"sobrenomes",
+				"sufixos",
+				"preferido",
+				"descricaoPreferido",
+				"usoCondicional",
+				"descricaoUsoCondicional",
+				"uso",
+				"alternativoUso",
+				"descricaoUso",
+				"dataInUtilizacao",
+				"dataFinUtilizacao",
+				"serie",
+				"estado",
+				"nomeEstado",
+				"meio",
+				"descricaoMeio",
+				"alternativoMeio",
+				"preferencia",
+				"descricaoPreferencia",
+				"detalhe",
+				"usoComunicacao",
+				"descricaoUsoComunicacao",
+				"alternativoUsoComunicacao",
+				"endereco",
+				"bairro",
+				"distrito",
+				"municipio",
+				"descricaoMunicipio",
+				"cep",
+				"caixaPostal",
+				"pais",
+				"nomePais",
+				"tipoEndereco",
+				"descricaoTipoEnd",
+				"dataInicialEnd",
+				"dataInEndAcu",
+				"dataFinalEnd",
+				"dataFinEndAcu",
+				"linhaEndereco",
+				"ordemEndereco",
+				"nascimento",
+				"nascAcuracia",
+				"nascSeguimento",
+				"descricaoNascSeg",
+				"nascPluralidade",
+				"descricaoNascPlu",
+				"nascOrdem",
+				"descricaoNascOrd",
+				"obito",
+				"obitoAcuracia",
+				"obitoFonte",
+				"descricaoObitoFnt",
+				"sexo",
+				"descricaoSexo",
+				"alternativoSexo",
+				"mae",
+				"pai",
+				"situacaoFamiliar",
+				"descricaoSitFam",
+				"raca",
+				"descricaoRaca",
+				"comentario",
+				"nacionalidade",
+				"descricaoNacionalidade",
+				"dataEntradaPais"
+				]
+}

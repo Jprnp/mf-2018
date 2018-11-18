@@ -1,16 +1,21 @@
 package br.ufg.inf.jprnp.dto;
 
 import com.google.gson.Gson;
+import org.everit.json.schema.ValidationException;
+import org.everit.json.schema.loader.SchemaLoader;
+import org.json.JSONObject;
+import org.xml.sax.SAXException;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.XMLConstants;
+import javax.xml.bind.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.StringReader;
-import java.io.StringWriter;
-import java.io.Writer;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+import java.io.*;
 import java.lang.reflect.Type;
 
 @XmlRootElement
@@ -113,7 +118,7 @@ public class CadastroDto {
     @XmlElement
     private int meio;
     @XmlElement
-    private String descicaoMeio;
+    private String descricaoMeio;
     @XmlElement
     private String alternativoMeio;
     @XmlElement
@@ -217,7 +222,7 @@ public class CadastroDto {
     @XmlElement
     private String dataEntradaPais;
 
-    protected static CadastroDto fromJson(String json, Class<?> src) {
+    public static CadastroDto fromJson(String json, Class<?> src) {
         Gson gson = new Gson();
         return gson.fromJson(json, (Type) src);
     }
@@ -228,7 +233,7 @@ public class CadastroDto {
         return json;
     }
 
-    protected static CadastroDto fromXml(String xml, Class<?> src) throws JAXBException {
+    public static CadastroDto fromXml(String xml, Class<?> src) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(src);
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         StringReader rd = new StringReader(xml);
@@ -241,5 +246,31 @@ public class CadastroDto {
         Writer sw = new StringWriter();
         marshaller.marshal(this, sw);
         return sw.toString();
+    }
+
+    public static boolean isXmlValid(File file, File schemaFile) throws IOException {
+        Source xmlFile = new StreamSource(file);
+        SchemaFactory schemaFactory = SchemaFactory
+                .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+        try {
+            Schema schema = schemaFactory.newSchema(schemaFile);
+            Validator validator = schema.newValidator();
+            validator.validate(xmlFile);
+            return true;
+        } catch (SAXException e) {
+            return false;
+        }
+    }
+
+    public static boolean isJsonValid(String schemaString, String jsonString) {
+        try {
+            JSONObject rawSchema = new JSONObject(schemaString);
+            org.everit.json.schema.Schema schema = SchemaLoader.load(rawSchema);
+            schema.validate(new JSONObject(jsonString)); // throws a ValidationException if this object is invalid
+            return true;
+        } catch (ValidationException e) {
+            return false;
+        }
     }
 }
