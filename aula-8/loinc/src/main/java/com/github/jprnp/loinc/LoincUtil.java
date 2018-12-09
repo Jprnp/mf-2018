@@ -30,7 +30,7 @@ public class LoincUtil {
     }
 
     public static ArrayList<Loinc> getLikeLoincNum(String loincNum) throws SQLException, ClassNotFoundException {
-        String query = "SELECT * FROM loinc WHERE loinc_num LIKE %" + loincNum + "%";
+    String query = "SELECT * FROM loinc WHERE loinc_num LIKE \"%" + loincNum + "%\"";
         MySQLAccess sql = new MySQLAccess();
 
         return sql.select(query);
