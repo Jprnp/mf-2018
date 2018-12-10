@@ -36,7 +36,7 @@ public class LoincUtil {
         return sql.select(query);
     }
 
-    public static ArrayList<Loinc> getByClassType(int classtype) {
+    public static ArrayList<Loinc> getByClassType(int classtype) throws SQLException, ClassNotFoundException {
         String query = "SELECT * FROM loinc WHERE classtype = " + classtype;
         MySQLAccess sql = new MySQLAccess();
 

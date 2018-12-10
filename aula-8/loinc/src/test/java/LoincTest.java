@@ -21,4 +21,32 @@ public class LoincTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void recuperarPorLoincNumSomenteUm() {
+        try {
+            Loinc result = LoincUtil.getByLoincNum("10032-1");
+            System.out.println(result.getLoincNum());
+            Assert.assertEquals(result.getLoincNum(), "10032-1");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void recuperarPorClassType() {
+        try {
+            ArrayList<Loinc> result = LoincUtil.getByClassType(1);
+            for (Loinc r : result) {
+                System.out.println(r.getClassType());
+                Assert.assertEquals(r.getClassType(), 1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
