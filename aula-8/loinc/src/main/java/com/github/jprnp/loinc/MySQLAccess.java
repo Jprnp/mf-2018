@@ -16,7 +16,7 @@ public class MySQLAccess {
         ArrayList<Loinc> result = new ArrayList<Loinc>();
 
         PreparedStatement pstmt = this.connect.prepareStatement(query);
-        ResultSet rs = pstmt.executeQuery(query);
+        ResultSet rs = pstmt.executeQuery();
 
         while(rs.next()) {
             result.add(LoincUtil.createFromResultSet(rs));

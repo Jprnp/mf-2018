@@ -23,14 +23,21 @@ public class LoincUtil {
     }
 
     public static Loinc getByLoincNum(String loincNum) throws SQLException, ClassNotFoundException {
-        String query = "SELECT * FROM loinc WHERE loinc_num = " + loincNum;
+        String query = "SELECT * FROM loinc WHERE loinc_num = \"" + loincNum + "\"";
         MySQLAccess sql = new MySQLAccess();
 
         return sql.select(query).get(0);
     }
 
     public static ArrayList<Loinc> getLikeLoincNum(String loincNum) throws SQLException, ClassNotFoundException {
-    String query = "SELECT * FROM loinc WHERE loinc_num LIKE \"%" + loincNum + "%\"";
+        String query = "SELECT * FROM loinc WHERE loinc_num LIKE \"%" + loincNum + "%\"";
+        MySQLAccess sql = new MySQLAccess();
+
+        return sql.select(query);
+    }
+
+    public static ArrayList<Loinc> getByClassType(int classtype) {
+        String query = "SELECT * FROM loinc WHERE classtype = " + classtype;
         MySQLAccess sql = new MySQLAccess();
 
         return sql.select(query);
